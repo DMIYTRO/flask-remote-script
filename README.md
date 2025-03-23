@@ -14,7 +14,7 @@
 
 1. Клонируйте репозиторий:
 ```bash
-git clone https://github.com/ваш-username/flask-remote-script.git
+git clone https://github.com/1kuperster/flask-remote-script.git
 cd flask-remote-script
 ```
 
@@ -34,10 +34,31 @@ python app.py
 
 4. Откройте в браузере: http://127.0.0.1:5000
 
+## Настройка ngrok
+
+Для доступа к приложению через интернет используется ngrok. Настройка:
+
+1. Скопируйте файл конфигурации:
+```bash
+cp ngrok.yml.example ngrok.yml
+```
+
+2. Получите токен авторизации на сайте [ngrok](https://dashboard.ngrok.com/get-started/your-authtoken)
+
+3. Замените `YOUR_AUTH_TOKEN_HERE` в файле `ngrok.yml` на ваш токен
+
+4. Запустите ngrok:
+```bash
+ngrok start --config ngrok.yml flask-app
+```
+
+5. Используйте полученный URL для доступа к приложению
+
 ## Технологии
 
 - Flask
 - Flask-SocketIO
 - Python Threading
 - WebSocket
-- HTML/CSS/JavaScript 
+- HTML/CSS/JavaScript
+- ngrok (для туннелирования) 
