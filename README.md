@@ -54,6 +54,20 @@ ngrok start --config ngrok.yml flask-app
 
 5. Используйте полученный URL для доступа к приложению
 
+## Запуск сервиса
+
+1. В первом терминале запустите Flask приложение:
+```bash
+python app.py
+```
+
+2. В новом терминале запустите ngrok:
+```bash
+ngrok start --config ngrok.yml flask-app
+```
+
+После запуска ngrok выведет URL, по которому будет доступно ваше приложение (например, `https://your-tunnel.ngrok.io`).
+
 ## Технологии
 
 - Flask
